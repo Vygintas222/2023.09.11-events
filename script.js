@@ -226,13 +226,19 @@ submitButton.addEventListener('click', function(){
 let li = document.createElement('li')
     li.textContent = numberDisplay.textContent
     ul.append(li)
-
-if (li.textContent>=5 ){
-  li.style.color = 'green'
-}
-if (li.textContent <5){
-  li.style.color = 'red'
-}
+    
+    if (li.textContent>=5 ){
+      li.style.color = 'green'
+    }
+    if (li.textContent <5){
+      li.style.color = 'red'
+    }
+    let deleteButton = document.createElement('button')
+        deleteButton.textContent = 'X'
+        li.append(deleteButton)
+        deleteButton.addEventListener('click', function(){
+          li.remove()
+        })
 
 })
 // 13. Sukurti naują elementą (h4) ir jį pridėti į „numbers" elemento pabaigą.
